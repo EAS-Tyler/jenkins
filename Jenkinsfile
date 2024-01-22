@@ -1,5 +1,5 @@
 pipeline {
-// agent any
+agent any
 
 // dont need to include checkout stage as pipeline is pointing to SCM toretreive jenkinsfile
 
@@ -10,7 +10,7 @@ pipeline {
               //  sh '  '
             }
         }
-    }
+    
         stage('Test') {
             steps {
                 echo 'Testing...'
@@ -24,4 +24,5 @@ pipeline {
                 // sh ' '
             }
         }
+    }
 }
