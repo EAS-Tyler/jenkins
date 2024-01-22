@@ -25,12 +25,12 @@ pipeline {
   stages {
         stage ('Deliver/deploy??') {
             steps {
-                echo "Deploying..."
+                echo "Deploying.."
                 sh ' '
 
             }
         }
     }
-
+ 
 
 }
