@@ -4,33 +4,24 @@ pipeline {
 // dont need to include checkout stage as pipeline is pointing to SCM toretreive jenkinsfile
 
     stages {
-        stage ('Build') {
+        stage('Build') {
             steps {
-                echo "Building..."
+                echo 'Building...'
                 sh '  '
-
             }
         }
     }
-  stages {
-        stage ('Test') {
+        stage('Test') {
             steps {
-                echo "Testing..."
+                echo 'Testing...'
                 sh ' '
-
             }
         }
-    }
 
-  stages {
-        stage ('Deliver/deploy??') {
+        stage('Deliver/deploy??') {
             steps {
-                echo "Deploying.."
+                echo 'Deploying..'
                 sh ' '
-
             }
         }
-    }
- 
-
 }
