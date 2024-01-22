@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+// agent any
 
 // dont need to include checkout stage as pipeline is pointing to SCM toretreive jenkinsfile
 
@@ -7,21 +7,21 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh '  '
+              //  sh '  '
             }
         }
     }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh ' '
+               // sh ' '
             }
         }
 
-        stage('Deliver/deploy??') {
+        stage('deploy??') {
             steps {
                 echo 'Deploying..'
-                sh ' '
+                // sh ' '
             }
         }
 }
