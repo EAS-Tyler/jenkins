@@ -1,11 +1,36 @@
 pipeline {
     agent any
 
-// do i need checkout stage? i am including 
+// dont need to include checkout stage as pipeline is pointing to SCM toretreive jenkinsfile
+
     stages {
-        stage ()
+        stage ('Build') {
+            steps {
+                echo "Building..."
+                sh '  '
+
+            }
+        }
+    }
+  stages {
+        stage ('Test') {
+            steps {
+                echo "Testing..."
+                sh ' '
+
+            }
+        }
     }
 
+  stages {
+        stage ('Deliver/deploy??') {
+            steps {
+                echo "Deploying..."
+                sh ' '
+
+            }
+        }
+    }
 
 
 }
