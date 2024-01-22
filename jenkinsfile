@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+// do i need checkout stage? i am including 
+    stages {
+        stage ()
+    }
+
+
+
+}
