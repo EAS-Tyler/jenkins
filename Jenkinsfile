@@ -1,27 +1,24 @@
 pipeline {
-agent any
-
-// dont need to include checkout stage as pipeline is pointing to SCM toretreive jenkinsfile
+    agent any
 
     stages {
+    //     stage('Test') {
+    //         steps {
+    //             echo 'Testing...'
+    //         // sh ' '
+    //         }
+    //     }
         stage('Build') {
             steps {
-                echo 'Building...'
-              //  sh '  '
-            }
-        }
-    
-        stage('Test') {
-            steps {
-                echo 'Testing...'
-               // sh ' '
+                echo 'Building docker image'
+                sh 'docker build -t jenk:jenko .'
             }
         }
 
-        stage('deploy??') {
+        stage('Deploy') {
             steps {
-                echo 'Deploying..'
-                // sh ' '
+                echo 'Deploy - Pushing docker image to registry'
+                sh 'docker push eastyler/jenkins-learn:jenko'
             }
         }
     }
