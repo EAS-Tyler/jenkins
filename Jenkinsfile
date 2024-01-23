@@ -2,12 +2,13 @@ pipeline {
     agent any
 
     stages {
-    //     stage('Test') {
-    //         steps {
-    //             echo 'Testing...'
-    //         // sh ' '
-    //         }
-    //     }
+        //     stage('Test') {
+        //         steps {
+        //             echo 'Testing...'
+        //         // sh 'npm i
+        //                 npm test '
+        //         }
+        //     }
         stage('Build') {
             steps {
                 echo 'Building docker image'
@@ -18,7 +19,10 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploy - Pushing docker image to registry'
-                sh 'docker push eastyler/jenkins-learn:jenko'
+                // add my authentication deets?
+                // sh 'docker '
+                // sh 'docker push eastyler/jenkins-learn:jenko'
+                sh 'docker tag jenk eastyler/jenky'
             }
         }
     }
