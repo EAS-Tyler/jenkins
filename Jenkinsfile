@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Building docker image'
                 // sh 'docker build -t jenk:jenko .'
-                sh 'eastyler/jenkins-learn:jenko'
+                sh 'docker build -t eastyler/jenkins-learn:jenko .'
             }
         }
 // create acces token so not using password 
