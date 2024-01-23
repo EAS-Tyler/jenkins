@@ -21,8 +21,9 @@ pipeline {
                 echo 'Deploy - Pushing docker image to registry'
                 // add my authentication deets?
                 sh 'docker login -u eastyler -p Dontbeshit1! https://docker.io'
-                sh 'docker push eastyler/jenkins-learn:jenko'
-                // sh 'docker tag jenk eastyler/jenky'
+                sh 'docker push jenk'
+            // sh 'docker push eastyler/jenkins-learn:jenko'
+            // sh 'docker tag jenk eastyler/jenky'
             }
         }
     }
