@@ -12,10 +12,11 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building docker image'
-                sh 'docker build -t jenk:jenko .'
+                // sh 'docker build -t jenk:jenko .'
+                sh 'eastyler/jenkins-learn:jenko'
             }
         }
-
+// create acces token so not using password 
         stage('Deploy') {
             steps {
                 echo 'Deploy - Pushing docker image to registry'
