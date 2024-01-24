@@ -18,17 +18,18 @@ pipeline {
                 sh 'docker build -t eastyler/jenkins-learn:jenko .'
             }
         }
-        stage('Login') {
-            steps {
-                echo 'Logging in...'
-                // sh 'docker build -t jenk:jenko .'
-                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-            }
-        }
+        // stage('Login') {
+        //     steps {
+        //         echo 'Logging in...'
+        //         // sh 'docker build -t jenk:jenko .'
+        //         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+        //     }
+        // }
         stage('Push') {
             steps {
                 echo 'Pushin...'
                 // sh 'docker build -t jenk:jenko .'
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
                 sh 'docker push eastyler/jenkins-learn:jenko'
             }
         }
