@@ -9,8 +9,8 @@ pipeline {
                 echo 'Testing...'
                 // sh 'npm install'
                 // sh 'npm test'
-                // cd ./backend
-                sh '''npm install
+                sh '''cd ./backend
+                      npm install
                       npm test'''
             }
         }
