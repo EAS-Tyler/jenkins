@@ -28,7 +28,7 @@ pipeline {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
-        stage('Push/Deploy') {
+        stage('Push') {
             steps {
                 echo 'Pushin...'
                 // sh 'docker build -t jenk:jenko .'
